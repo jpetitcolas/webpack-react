@@ -1,25 +1,22 @@
 var HelloSayer = require('./HelloSayer');
 var React = require('react');
 
-var HelloForm = React.createClass({
-	getInitialState: function() {
-		return {
-			name: 'world'
-		};
-	},
+class HelloForm extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = { name: 'world' };
+	}
 
-	render: function() {
+	render() {
 		return (<div>
-			<input type="text" onChange={this.onChange} />
+			<input type="text" onChange={this.onChange.bind(this)} />
 			<HelloSayer name={this.state.name} />
 		</div>);
-	},
-
-	onChange: function(e) {
-		this.setState({
-			name: e.target.value
-		});
 	}
-});
 
-module.exports = HelloForm;
+	onChange(e) {
+		this.setState({ name: e.target.value });
+	}
+}
+
+export default HelloForm;
