@@ -1,3 +1,5 @@
+require('../sass/HelloForm.scss');
+
 var HelloSayer = require('./HelloSayer');
 var React = require('react');
 
@@ -8,7 +10,7 @@ class HelloForm extends React.Component {
 	}
 
 	render() {
-		return (<div>
+		return (<div className="hello-form">
 			<input type="text" onChange={this.onChange.bind(this)} />
 			<HelloSayer name={this.state.name} />
 		</div>);
