@@ -4,8 +4,9 @@
   "description": "A Webpack sample project, configured for ES6 React and SASS",
   "main": "index.js",
   "scripts": {
+    "start": "http-server -p 3000 .",
     "build": "NODE_ENV=production webpack -p",
-    "watch": "webpack-dev-server --progress --colors"
+    "watch": "webpack-dev-server --hot --progress --colors"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,8 @@
   },
   "homepage": "https://github.com/jpetitcolas/webpack-react",
   "devDependencies": {
+    "http-server": "^0.8.0",
+    "jsx-loader": "^0.13.2",
     "node-libs-browser": "^0.5.0",
     "webpack": "^1.9.5",
     "webpack-dev-server": "^1.8.2"
