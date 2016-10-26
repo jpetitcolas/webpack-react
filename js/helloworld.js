@@ -1,4 +1,5 @@
 var HelloForm = require('./HelloForm');
 var React = require('react');
+var ReactDOM = require('react-dom');
 
-React.render(<HelloForm />, document.getElementsByTagName('body')[0]);
+ReactDOM.render(<HelloForm />, document.getElementById('app'));
