@@ -22,11 +22,11 @@ module.exports = {
     module: {
         loaders: [
             { 
-                test: /\.js$/, loaders: ['react-hot', 'jsx', 'babel'], exclude: /node_modules/ 
+                test: /\.js$/, loaders: ['react-hot-loader/webpack', 'jsx-loader', 'babel-loader'], exclude: /node_modules/ 
             },
             {
                 test: /\.scss$/,
-                loader: ExtractTextPlugin.extract('css!sass')
+                loader: ExtractTextPlugin.extract('css-loader!sass-loader')
             }
         ]
        },
